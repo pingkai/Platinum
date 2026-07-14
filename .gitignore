@@ -1,4 +1,5 @@
 Carthage
+Cartfile.resolved
 /Targets
 */**/Debug
 xcuserdata

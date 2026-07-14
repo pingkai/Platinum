@@ -3232,6 +3232,7 @@
 				INFOPLIST_FILE = Platinum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plutinosoft.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Platinum;
@@ -3288,6 +3289,7 @@
 				INFOPLIST_FILE = Platinum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plutinosoft.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Platinum;
