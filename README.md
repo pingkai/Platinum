@@ -39,6 +39,42 @@ Open a shell, go to the Platinum root directory and type 'scons' (http://scons.o
 The output of the scons build will be found under Build/Targets/{TARGET}/{Debug|Release}.
 Additionally, the output is copied under Targets/{TARGET}/{Debug|Release} for convenience when applicable.
 
+## Android
+
+First you need a python 2.7 version.
+
+on MacOS:
+
+```bash
+brew install pyenv
+pyenv install 2.7.18
+brew install pyenv-virtualenv
+# zsh
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
+source ~/.zshrc
+
+# bash
+# 将配置写入 .bash_profile
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+
+pyenv virtualenv 2.7.18 platinum-env
+pyenv activate platinum-env
+# 现在你在 Python 2.7 环境下
+pip install scons
+# 再次尝试你的 scons 命令
+scons target=arm64-android-linux build_config=Release
+
+
+# 然后退出 Python 2.7环境
+pyenv deactivate
+```
+
+
+
 # Running Sample Applications
 
 ## FileMediaServerTest
