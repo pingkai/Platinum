@@ -57,7 +57,9 @@ PLT_DeviceData::PLT_DeviceData(NPT_HttpUrl      description_url,
     m_DeviceType(device_type),
     m_FriendlyName(friendly_name),
     m_BootId(0),
-    m_NextBootId(0)
+    m_NextBootId(0),
+    m_LeaseTime(lease_time),
+    m_LeaseTimeLastUpdate(0.0)
 {
     if (uuid == NULL || strlen(uuid) == 0) {
         PLT_UPnPMessageHelper::GenerateGUID(m_UUID);
@@ -836,3 +838,4 @@ PLT_DeviceData::FindServiceByEventSubURL(const char*   url,
 
     return NPT_FAILURE;
 }
+

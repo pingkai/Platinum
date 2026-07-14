@@ -78,7 +78,7 @@ public:
     NPT_String                    m_XmlBody;
     
 protected:
-    PLT_EventNotification() : m_EventKey(0) {}
+    PLT_EventNotification() : m_ReceptionTime(0.0), m_EventKey(0) {}
 };
 
 /*----------------------------------------------------------------------
@@ -189,3 +189,4 @@ private:
 };
 
 #endif /* _PLT_EVENT_H_ */
+
